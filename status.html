@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Living Word Imprints | Order Status</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="status-page">
+  <main class="status-shell">
+    <section class="status-card" aria-labelledby="statusTitle">
+      <img src="assets/logo.png" alt="Living Word Imprints" class="status-logo" />
+      <div class="status-head">
+        <h1 id="statusTitle">Check Order Status</h1>
+        <p>Enter the invoice number from your receipt to see the current order status and pickup date.</p>
+      </div>
+
+      <form id="orderStatusForm" class="status-form">
+        <label>
+          Invoice Number
+          <input id="orderStatusInput" inputmode="numeric" autocomplete="off" placeholder="Example: 123456" required>
+        </label>
+        <button class="primary" id="orderStatusBtn" type="submit">Check Status</button>
+      </form>
+
+      <div class="status-message" id="orderStatusMessage" role="status" hidden></div>
+      <section class="status-result" id="orderStatusResult" hidden></section>
+
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="status.js"></script>
+</body>
+</html>
